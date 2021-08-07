@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/表单标签.css" />
+		<script>
+			$(document).ready(function(){
+				$("#show_hide").click(function(){
+					$("img").toggle();
+				});
+				$("#fade").click(function(){
+					$("img").fadeToggle(3000);
+				});
+				$("#slide").click(function(){
+					$("img").slideToggle(5000);
+				});
+			});
+			
+		</script>
+<style>
+	nav ol {
+		list-style: none;
+		padding: 5px;
+		background-color: #99f;
+		padding-left: 10px;
+		height: 40px;
+	}
+	
+	nav ol li {
+		display: inline;
+		padding: 0px 5px 0px 5px;
+		height: 30px;
+		border-right: 1px solid #ccc;
+	}
+	
+	nav ol li a {
+		color: #006;
+		text-decoration: none;
+		margin: 0px 5px 1px 5px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	
+	nav ol li a:hover {
+		color: #fff;
+	}
+</style>
+		<title>动画</title>
+	</head>
+	<body>
+		<header>
+			<h2>动画</h2>
+		</header>
+		<nav>
+			<ol>
+				<li><a id="show_hide" href="#">show/hide</a></li>
+				<li><a id="fade" href="#">fadeIn/fadeOut</a></li>
+				<li><a id="slide" href="#">slideUp/slideDown</a></li>
+			</ol>
+		</nav>
+		<article>
+			<div id="animate_demo" style="padding: 30px;">
+				<img src="img/一半.jpg" width="200px" height="200px" />
+				<img src="img/另一半.jpg" width="200px" height="200px" />
+			</div>
+		</article>
+		<footer>&copy;我们不是猫耳FM也不是P站</footer>
+	</body>
+</html>

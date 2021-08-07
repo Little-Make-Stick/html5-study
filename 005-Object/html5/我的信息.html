@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>我的信息</title>
+		<script>
+			var url = decodeURI(window.location.href);
+            var texts = url.split("?account=");
+            var account = texts[1];
+            if(account===undefined){
+                Tologin();
+            }
+		    var db = openDatabase('EduManage', '1.0', 'Test DB', 2 * 1024 * 1024);
+		    db.transaction(function (tx) {
+                tx.executeSql('SELECT * FROM StudentLogins where account=?', [account], function (tx, results) {
+                	var len = results.rows.length;
+                	if(len==0){
+                        document.write("<header><h1 style='margin: 0 0 3px 0;padding: 0;text-align: center;font-size: 30px;'>学生信息管理</h1><h2 style='margin: 0 0 15px 0;padding: 0;text-align: center;font-style: center;font-size: 12px;'>我的资料</h2></header>");
+                        document.write("<article style='line-height: 50px;background: cornflowerblue;margin: 50px 100px 50px 100px ;padding: 50px;font-size: 25px;'>");
+                        document.write("<input type='button' value='登录' onclick='Tologin()' />"+"<br/></article>");
+                        document.write("<footer style='text-align: center;font-size: 12px;color: #888;margin-top: 24px;'><p>&copy;学生信息管理---皮皮虾教务处</p></footer>");
+                	}else{
+                        db.transaction(function (tx) {
+                            tx.executeSql('SELECT * FROM Students where account=?', [account], function (tx, results) {  
+                                document.write("<header><h1 style='margin: 0 0 3px 0;padding: 0;text-align: center;font-size: 30px;'>学生信息管理</h1><h2 style='margin: 0 0 15px 0;padding: 0;text-align: center;font-style: center;font-size: 12px;'>我的资料</h2></header>");
+                    	        document.write("<article style='text-align: center;line-height: 50px;background: cornflowerblue;margin: 50px 100px 50px 100px ;padding: 50px;font-size: 25px;'>姓名："+results.rows.item(0).name+"<br/>");
+		                        document.write("手机号："+results.rows.item(0).telephone+"<br/>");
+		                        document.write("邮箱地址："+results.rows.item(0).email+"<br/>");
+		                        document.write("出生日期："+results.rows.item(0).birthday+"<br/>");
+		                        document.write("省份："+results.rows.item(0).province+"<br/>");
+		                        document.write("城市："+results.rows.item(0).city+"<br/>");
+	                            document.write("<input type='button' value='退出登录' onclick='exitEvent()' />"+"<br/></article>");
+	                            document.write("<footer style='text-align: center;font-size: 12px;color: #888;margin-top: 24px;'><p>&copy;学生信息管理---皮皮虾教务处</p></footer>");   
+                            }, null);
+                        });
+                    }
+                }, null);
+            });
+			function Tologin(){
+				window.location.href="表单-登录.html";
+			}
+			
+			function exitEvent(){
+				
+				//window.sessionStorage.removeItem("LoginKey");
+				db.transaction(function (tx) {
+                    tx.executeSql('DELETE FROM StudentLogins where account=?', [account]);
+                });
+				location.reload();
+			}
+		</script>
+		<link type="text/css" rel="stylesheet" href="../css3/表单标签.css" />
+	</head>
+	<body>
+		
+	</body>
+</html>

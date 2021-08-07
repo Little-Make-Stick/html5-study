@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/表单标签.css" />
+		<script>
+			var account="mitsuha";
+			var passwd=123456;
+			$(document).ready(function(){
+				$("[type=submit]").click(function(){
+					if((document.getElementById("account").value==account)&&(document.getElementById("password").value==passwd)){
+						alert("login succeed！");
+						window.location.href="index.html";
+					}else{
+						alert("login failed！");
+						$("#account").focus();
+					}
+				});
+			});
+			$(document).ready(function(){
+				$("#forget").click(function(){
+				    alert("帐号：mitsuha，密码：123456");
+			    });
+			});
+		</script>
+		<title>表单事件</title>
+	</head>
+	<body>
+		<header>
+			<h2>F站</h2>
+		</header>
+		<article>  
+		<form id="LoginForm" autocomplete="on" method="get">
+			<fieldset>
+				<legend>客官请登录</legend>   
+				<br /><br />
+				帐号：<input id="account" type="text" placeholder="Enter your account" autofocus required size="50" />
+				<br /><br /><br />
+				密码：<input id="password"  type=" password" placeholder="Enter your password" required size="50" pattern="([0-9]{6})"/>
+				<br /><br /><br />
+			</fieldset>
+			<a href="#" id="forget">忘记密码</a><br /><br />
+			<input type="submit" value="登录"  />
+			<input type="button" value="取消"  />
+		</form>
+		</article>
+		<footer>&copy;我们不是猫耳FM也不是P站</footer>
+	</body>
+</html>

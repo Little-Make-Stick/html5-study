@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cqYjI73" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cqYjI73" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-list.cqYjI73 ul.cqYjI73 li.cqYjI73{padding: 0px} .x-list.cqYjI73 ul.cqYjI73 li.cqYjI73 div.cqYjI73{padding: 5px}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cqYjI73" class="cqYjI73"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc7req2a-iosstatusbar cqYjI73" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cqYjI73"> 
+    <div class="x-panel-top cqYjI73" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cqYjI73"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cqYjI73" style="background-color:#FFFFFF;font-size:larger;font-weight:bolder;color:#000000;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;标题&quot;}" __cid="cqYjI73"> 
+        <div class="x-titlebar-left cqYjI73" __cid="cqYjI73"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cqYjI73" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cqYjI73"> 
+            <i class="icon-chevron-left cqYjI73" __cid="cqYjI73"/>  
+            <span __cid="cqYjI73" class="cqYjI73"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cqYjI73" __cid="cqYjI73" data-bind="text:$model.params.className">标题</div>  
+        <div class="x-titlebar-right  cqYjI73" __cid="cqYjI73"> 
+          <div class="empty cqYjI73" __cid="cqYjI73"/> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content  x-scroll-view cqYjI73" xid="content1" _xid="C86F9E122D100001B6A8D8207D5352D0" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cqYjI73"> 
+      <div class="x-scroll cqYjI73" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" style="clip:rect(0px auto auto 0px);" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="cqYjI73"> 
+        <div class="x-content-center x-pull-down container cqYjI73" xid="div1" __cid="cqYjI73"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down cqYjI73" xid="i1" __cid="cqYjI73"/>  
+          <span class="x-pull-down-label cqYjI73" xid="span1" __cid="cqYjI73">下拉刷新...</span> 
+        </div>  
+        <div class="x-scroll-content cqYjI73" xid="div2" __cid="cqYjI73"> 
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cqYjI73" xid="classList" dataItemAlias="secondClassRow" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;SecondClassData&quot;,&quot;filter&quot;:&quot;$row.val(\&quot;fRootID\&quot;) == $model.params.rootID&quot;}" __cid="cqYjI73"> 
+            <ul class="x-list-template hide cqYjI73" xid="listTemplateUl1" __cid="cqYjI73" data-bind="foreach:{data:$model.foreach_classList($element),afterRender:$model.foreach_afterRender_classList.bind($model,$element),as:'secondClassRow'}"> 
+              <li xid="li1" class="col-xs-12 cqYjI73" __cid="cqYjI73"> 
+                <div xid="div4" style="font-size:larger;font-weight:bold;background-color:#E3E3E3;top:auto;left:auto;clip:rect(auto auto auto 0px);" __cid="cqYjI73" class="cqYjI73" data-bind="text:val(&quot;fClassName&quot;)"/>  
+                <div component="$model/UI2/system/components/justep/list/list" class="x-list cqYjI73" xid="goodsList" dataItemAlias="threeClassRow" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;$model.ThreeClassData&quot;,&quot;filter&quot;:&quot;$row.val(\&quot;fSecondID\&quot;) == secondClassRow.val(\&quot;fID\&quot;)&quot;}" __cid="cqYjI73"> 
+                  <ul class="x-list-template hide cqYjI73" xid="listTemplateUl2" __cid="cqYjI73" data-bind="foreach:{data:$model.foreach_goodsList($element),afterRender:$model.foreach_afterRender_goodsList.bind($model,$element),as:'threeClassRow'}"> 
+                    <li xid="li2" class="col-xs-2 cqYjI73" __cid="cqYjI73"> 
+                      <img src=" " alt="" xid="image1" __cid="cqYjI73" class="cqYjI73" data-bind="attr:{src:val(&quot;fImg&quot;)}"/>  
+                      <span xid="span3" __cid="cqYjI73" class="cqYjI73" data-bind="text:val(&quot;fClassName&quot;)"/> 
+                    </li> 
+                  </ul> 
+                </div> 
+              </li> 
+            </ul> 
+          </div> 
+        </div>  
+        <div class="x-content-center x-pull-up cqYjI73" xid="div3" __cid="cqYjI73"> 
+          <span class="x-pull-up-label cqYjI73" xid="span2" __cid="cqYjI73">加载更多...</span> 
+        </div> 
+      </div> 
+    </div>  
+    <style __cid="cqYjI73" class="cqYjI73">.x-panel.pc7req2a-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pc7req2a-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pc7req2a-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc7req2a-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc7req2a-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc7req2a-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc7req2a-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc7req2a-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc7req2a-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

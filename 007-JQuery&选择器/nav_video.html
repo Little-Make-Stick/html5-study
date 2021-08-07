@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//全局选择器
+				$("*").css("color","red");
+				//并集选择器
+				$("h1,video").css("border","1px solid black");
+				$("h1,video").css("padding","20px");
+			});
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<h1>蜡笔小新</h1>
+		<video autoplay="autoplay" controls="controls" width="500px" height="300px">
+			<source src="video/蜡笔小新-.mp4" type="video/mp4"></source>
+		</video>
+	</body>
+</html>

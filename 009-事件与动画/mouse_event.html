@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/表单标签.css" />
+		<script>
+			$(document).ready(function(){
+				$("img").click(function(){
+					$("#img_text").show();
+				});
+			});
+			$(document).ready(function(){
+				$("#mood").mouseover(function(){
+					$("#mouse_move").addClass("text_style");
+				});
+				$("#mood").mouseout(function(){
+					$("#mouse_move").removeClass("text_style");
+				});
+			});
+		</script>
+		<style>
+			.text_style{
+				background: red;
+				padding: 20px;
+				line-height: 35px;
+				color: white;
+			}
+		</style>
+		<title>鼠标事件</title>
+	</head>
+	<body>
+		<header>鼠标事件</header>
+		<article>
+			<div id="click_event">
+				<img src="img/热评吖.jpg" width="300px" height="300px" />
+				<p id="img_text" hidden="hidden" style="border: 1px solid black;background: pink; color:red;padding: 10px;">
+					微博上看到一段话：“如果你还能看到谁的消息会心跳加速不自觉的微笑，答应我排除万难也要把他睡了 不负此生。”
+				</p>
+			</div>
+			<div id="mouse_move">
+				<p id="mood">
+				喜欢你是我最深的不安<br />
+				其余的心事请你就别管<br />
+                             我知道缺憾是一种浪漫<br />
+                             好多人还羡慕不来<br />
+				</p>
+			</div>
+		</article>
+		<footer>&copy;我们不是猫耳FM也不是P站</footer>
+	</body>
+</html>

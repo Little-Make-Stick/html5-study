@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<div component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window ceqq2me" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="ceqq2me" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/output/output,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <style>null</style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="ceqq2me" class="ceqq2me"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc3QBn2q-iosstatusbar ceqq2me" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="ceqq2me"> 
+    <div class="x-panel-top ceqq2me" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="ceqq2me"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar ceqq2me" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&#34;title&#34;:&#34;记账本&#34;}" __cid="ceqq2me"> 
+        <div class="x-titlebar-left ceqq2me" __cid="ceqq2me"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon ceqq2me" xid="menuBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:menuBtnClick" data-config="{&#34;icon&#34;:&#34;linear linear-chevronleft&#34;,&#34;label&#34;:&#34;&#34;}" __cid="ceqq2me"> 
+            <i class="linear linear-chevronleft ceqq2me" __cid="ceqq2me"></i>  
+            <span __cid="ceqq2me" class="ceqq2me"></span> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title ceqq2me" __cid="ceqq2me">记账本</div>  
+        <div class="x-titlebar-right  ceqq2me" __cid="ceqq2me">
+          <div class="empty ceqq2me" __cid="ceqq2me"></div>
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon ceqq2me" xid="newBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:newBtnClick" data-config="{&#34;icon&#34;:&#34;icon-android-add&#34;,&#34;label&#34;:&#34;button&#34;}" __cid="ceqq2me"> 
+            <i xid="i1" class="icon-android-add ceqq2me" __cid="ceqq2me"></i>  
+            <span xid="span1" __cid="ceqq2me" class="ceqq2me"></span>
+          </a>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content  x-scroll-view ceqq2me" xid="content1" _xid="C86A1C887F10000113CB150015101DCB" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="ceqq2me">
+      <div class="x-scroll ceqq2me" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="ceqq2me"> 
+        <div class="x-content-center x-pull-down container ceqq2me" xid="div1" __cid="ceqq2me"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down ceqq2me" xid="i2" __cid="ceqq2me"></i>  
+          <span class="x-pull-down-label ceqq2me" xid="span2" __cid="ceqq2me">下拉刷新...</span>
+        </div>  
+        <div class="x-scroll-content ceqq2me" xid="div2" __cid="ceqq2me">
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list ceqq2me" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&#34;data&#34;:&#34;accountData&#34;}" __cid="ceqq2me"> 
+            <ul class="x-list-template hide ceqq2me" xid="listTemplateUl1" __cid="ceqq2me" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+              <li xid="li1" __cid="ceqq2me" class="ceqq2me">
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row ceqq2me" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ceqq2me"> 
+                  <div class="x-col ceqq2me" xid="col2" __cid="ceqq2me" data-bind="event:{click:$model._callModelFn.bind($model, 'listLinkClick')}">
+                    <div component="$model/UI2/system/components/justep/row/row" class="x-row ceqq2me" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ceqq2me"> 
+                      <div class="x-col ceqq2me" xid="col5" __cid="ceqq2me">
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output ceqq2me" xid="output1" style="font-size:x-large;" data-bind="component:{ref:ref(&#34;fClass&#34;),name:'$model/UI2/system/components/justep/output/output'},style:{'color': val(&#34;fType&#34;) == '收入'?'green':'brown'}" __cid="ceqq2me"></div>
+                      </div>  
+                      <div class="x-col ceqq2me" xid="col6" __cid="ceqq2me">
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output ceqq2me" xid="output2" style="font-size:x-large;" data-bind="component:{ref:ref(&#34;fMoney&#34;),name:'$model/UI2/system/components/justep/output/output'},style:{'color': val(&#34;fType&#34;) == '收入'?'green':'brown'}" __cid="ceqq2me"></div>
+                      </div>
+                    </div>  
+                    <div component="$model/UI2/system/components/justep/row/row" class="x-row ceqq2me" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ceqq2me"> 
+                      <div class="x-col ceqq2me" xid="col8" __cid="ceqq2me">
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output ceqq2me" xid="output3" data-bind="component:{ref:ref(&#34;fDescription&#34;),name:'$model/UI2/system/components/justep/output/output'}" __cid="ceqq2me"></div>
+                      </div>  
+                      <div class="x-col ceqq2me" xid="col9" __cid="ceqq2me">
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output ceqq2me" xid="output4" data-bind="component:{ref:ref(&#34;fDate&#34;),name:'$model/UI2/system/components/justep/output/output'}" __cid="ceqq2me"></div>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="x-col x-col-fixed x-col-center ceqq2me" xid="col3" style="width:auto;" __cid="ceqq2me">
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-sm btn-only-icon ceqq2me" xid="deleteBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:deleteBtnClick" data-config="{&#34;icon&#34;:&#34;icon-android-close&#34;,&#34;label&#34;:&#34;button&#34;}" __cid="ceqq2me"> 
+                      <i xid="i3" class="icon-android-close ceqq2me" __cid="ceqq2me"></i>  
+                      <span xid="span4" __cid="ceqq2me" class="ceqq2me"></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul> 
+          </div>
+        </div>  
+        <div class="x-content-center x-pull-up ceqq2me" xid="div3" __cid="ceqq2me"> 
+          <span class="x-pull-up-label ceqq2me" xid="span3" __cid="ceqq2me">加载更多...</span>
+        </div> 
+      </div>
+    </div>  
+    <style __cid="ceqq2me" class="ceqq2me">.x-panel.pc3QBn2q-iosstatusbar >.x-panel-top {height: 48px;}.x-panel.pc3QBn2q-iosstatusbar >.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pc3QBn2q-iosstatusbar >.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc3QBn2q-iosstatusbar >.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc3QBn2q-iosstatusbar >.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc3QBn2q-iosstatusbar >.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc3QBn2q-iosstatusbar >.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc3QBn2q-iosstatusbar >.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc3QBn2q-iosstatusbar >.x-panel-content {top: 48px;}</style>
+  </div>  
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-events="onReceive:windowDialog1Receive" data-config="{&#34;src&#34;:&#34;$model/UI2/test/account/detail.w&#34;}" __cid="ceqq2me" class="ceqq2me">
+    <result concept="accountData" operation="edit" origin="accountData" xid="default23" __cid="ceqq2me" class="ceqq2me"> 
+      <mapping from="fID" to="fID" locator="true" xid="default24" __cid="ceqq2me" class="ceqq2me"></mapping>  
+      <mapping from="fCreateTime" to="fCreateTime" xid="default25" __cid="ceqq2me" class="ceqq2me"></mapping>  
+      <mapping from="fDate" to="fDate" xid="default26" __cid="ceqq2me" class="ceqq2me"></mapping>  
+      <mapping from="fMoney" to="fMoney" xid="default27" __cid="ceqq2me" class="ceqq2me"></mapping>  
+      <mapping from="fDescription" to="fDescription" xid="default28" __cid="ceqq2me" class="ceqq2me"></mapping>  
+      <mapping from="fType" to="fType" xid="default29" __cid="ceqq2me" class="ceqq2me"></mapping>  
+      <mapping from="fClass" to="fClass" xid="default30" __cid="ceqq2me" class="ceqq2me"></mapping>
+    </result>
+    <div class="x-dialog-overlay ceqq2me" __cid="ceqq2me"></div>
+    <div class="x-dialog ceqq2me" style="display:none;" __cid="ceqq2me">
+      <div class="x-dialog-title ceqq2me" __cid="ceqq2me">
+        <button class="close ceqq2me" __cid="ceqq2me">
+          <span __cid="ceqq2me" class="ceqq2me">×</span>
+        </button>
+        <div class="x-dialog-title-text ceqq2me" __cid="ceqq2me"></div>
+      </div>
+      <div class="x-dialog-body ceqq2me" __cid="ceqq2me"></div>
+    </div>
+  </span>
+</div>

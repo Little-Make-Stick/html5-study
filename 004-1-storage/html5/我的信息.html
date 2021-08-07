@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的信息</title>
+		<script>
+			var name=window.localStorage.getItem("name");
+			var telephone=window.localStorage.getItem("telephone");
+			var email=window.localStorage.getItem("email");
+			var birthday=window.localStorage.getItem("birthday");
+			var province=window.localStorage.getItem("province");
+			var city=window.localStorage.getItem("city");
+			function exitEvent(){
+				window.sessionStorage.removeItem("LoginKey");
+				location.reload();
+			}
+		</script>
+		<style>
+			article{
+				line-height: 50px;
+				background: cornflowerblue;
+				margin: 50px 100px 50px 100px ;
+				padding: 50px;
+				font-size: 25px;
+			}
+		</style>
+		<link type="text/css" rel="stylesheet" href="../css3/表单标签.css" />
+	</head>
+	<body>
+	<header>
+		<h1>学生信息管理</h1>
+		<h2>我的资料</h2>
+	</header>
+	<article>
+	    <script>
+		    var loginkey=sessionStorage.getItem("LoginKey");
+		    if(loginkey=="Logined"){
+		    	document.write("姓名："+name+"<br/>");
+		        document.write("手机号："+telephone+"<br/>");
+		        document.write("邮箱地址："+email+"<br/>");
+		        document.write("出生日期："+birthday+"<br/>");
+		        document.write("省份："+province+"<br/>");
+		        document.write("城市："+city+"<br/>");
+		        document.write("<input type='button' value='退出登录' onclick='exitEvent()' />"+"<br/>");
+		    }else{
+		    	alert("请先登录");
+		    	window.location.href="表单-登录.html"; 
+		    }
+		   
+	    </script>
+	</article>
+	<footer>
+		<p>&copy;学生信息管理---皮皮虾教务处</p>
+	</footer>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<div component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cny2mMb" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cny2mMb" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,">
+  <style>null</style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cny2mMb" class="cny2mMb"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcMFn6vq-iosstatusbar cny2mMb" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cny2mMb"> 
+    <div class="x-panel-top cny2mMb" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cny2mMb"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cny2mMb" style="background-color:#FFFFFF;color:#000000;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&#34;title&#34;:&#34;购物车&#34;}" __cid="cny2mMb"> 
+        <div class="x-titlebar-left cny2mMb" __cid="cny2mMb"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cny2mMb" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&#34;icon&#34;:&#34;icon-chevron-left&#34;,&#34;label&#34;:&#34;&#34;}" __cid="cny2mMb"> 
+            <i class="icon-chevron-left cny2mMb" __cid="cny2mMb"></i>  
+            <span __cid="cny2mMb" class="cny2mMb"></span> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cny2mMb" __cid="cny2mMb">购物车</div>  
+        <div class="x-titlebar-right  cny2mMb" __cid="cny2mMb">
+          <div class="empty cny2mMb" __cid="cny2mMb"></div>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content  x-scroll-view cny2mMb" xid="content1" _xid="C86F61DDBA200001C894CC304CE51550" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cny2mMb"> 
+      <div class="x-scroll cny2mMb" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="cny2mMb"> 
+        <div class="x-content-center x-pull-down container cny2mMb" xid="div1" __cid="cny2mMb"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down cny2mMb" xid="i4" __cid="cny2mMb"></i>  
+          <span class="x-pull-down-label cny2mMb" xid="spanscro1" __cid="cny2mMb">下拉刷新...</span>
+        </div>  
+        <div class="x-scroll-content cny2mMb" xid="div2" __cid="cny2mMb">
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list x-cards cny2mMb" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&#34;data&#34;:&#34;cartShopData&#34;}" __cid="cny2mMb"> 
+            <ul class="x-list-template hide cny2mMb" xid="listTemplateUl1" __cid="cny2mMb" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+              <li xid="li1" class="x-min-height cny2mMb" __cid="cny2mMb"> 
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cny2mMb" xid="row1" style="background-color:#FD4609;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cny2mMb"> 
+                  <div class="x-col x-col-10 x-col-center cny2mMb" xid="col1" __cid="cny2mMb">
+                    <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cny2mMb" xid="shopCheckbox" checkedValue="1" data-config="{&#34;checked&#34;:false,&#34;checkedValue&#34;:&#34;1&#34;,&#34;disabled&#34;:false}" data-bind="component:{ref:ref(&#34;fCheck&#34;),name:'$model/UI2/system/components/justep/button/checkbox'}" data-events="onChange:shopCheckboxChange" __cid="cny2mMb">
+                      <input type="checkbox" __cid="cny2mMb" class="cny2mMb">
+                      <label __cid="cny2mMb" class="cny2mMb"></label>
+                    </span>
+                  </div>  
+                  <div class="x-col x-col-fixed x-col-center cny2mMb" xid="col2" __cid="cny2mMb">
+                    <span xid="span1" style="font-family:Century;font-size:large;font-weight:bold;" __cid="cny2mMb" class="cny2mMb" data-bind="text:val(&#34;fShopName&#34;)"></span>
+                  </div> 
+                </div>  
+                <div component="$model/UI2/system/components/justep/list/list" class="x-list x-cards cny2mMb" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&#34;data&#34;:&#34;$model.cartGoodsData&#34;,&#34;filter&#34;:&#34; $row.val(\&#34;fShopID\&#34;) == val(\&#34;id\&#34;)&#34;}" __cid="cny2mMb"> 
+                  <ul class="x-list-template hide cny2mMb" xid="listTemplateUl2" __cid="cny2mMb" data-bind="foreach:{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
+                    <li xid="li2" __cid="cny2mMb" class="cny2mMb">
+                      <div component="$model/UI2/system/components/justep/row/row" class="x-row cny2mMb" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cny2mMb"> 
+                        <div class="x-col x-col-fixed cny2mMb" xid="col7" style="width:auto;" __cid="cny2mMb">
+                          <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cny2mMb" xid="goodsCheckbox" checkedValue="1" data-config="{&#34;checked&#34;:false,&#34;checkedValue&#34;:&#34;1&#34;,&#34;disabled&#34;:false}" data-bind="component:{ref:ref(&#34;fCheck&#34;),name:'$model/UI2/system/components/justep/button/checkbox'}" data-events="onChange:goodsCheckboxChange" __cid="cny2mMb">
+                            <input type="checkbox" __cid="cny2mMb" class="cny2mMb">
+                            <label __cid="cny2mMb" class="cny2mMb"></label>
+                          </span>
+                        </div>  
+                        <div class="x-col x-col-20 cny2mMb" xid="col8" __cid="cny2mMb">
+                          <img src=" " alt="" xid="image1" align="middle" style="width:150px;" __cid="cny2mMb" class="cny2mMb" data-bind="attr:{src:val(&#34;fImg&#34;)}">
+                        </div>  
+                        <div class="x-col x-col-fixed cny2mMb" xid="col9" __cid="cny2mMb">
+                          <div component="$model/UI2/system/components/justep/row/row" class="x-row cny2mMb" xid="row4" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cny2mMb"> 
+                            <div class="x-col x-col-fixed cny2mMb" xid="col10" __cid="cny2mMb">
+                              <span xid="span2" style="font-family:Castellar;font-size:x-large;font-weight:bold;" __cid="cny2mMb" class="cny2mMb" data-bind="text:val(&#34;fTitle&#34;)"></span>
+                            </div> 
+                          </div>  
+                          <div component="$model/UI2/system/components/justep/row/row" class="x-row cny2mMb" xid="row5" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cny2mMb"> 
+                            <div class="x-col x-col-fixed cny2mMb" xid="col13" __cid="cny2mMb">
+                              <span xid="span3" __cid="cny2mMb" class="cny2mMb">型号：</span>  
+                              <span xid="span4" __cid="cny2mMb" class="cny2mMb" data-bind="text:val(&#34;fSize&#34;)"></span>
+                            </div> 
+                          </div>  
+                          <div component="$model/UI2/system/components/justep/row/row" class="x-row cny2mMb" xid="row6" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cny2mMb"> 
+                            <div class="x-col x-col-fixed cny2mMb" xid="col16" __cid="cny2mMb">
+                              <span xid="span5" __cid="cny2mMb" class="cny2mMb">￥</span>  
+                              <span xid="span6" __cid="cny2mMb" class="cny2mMb" data-bind="text:val(&#34;fPrice&#34;)"></span>
+                            </div>  
+                            <div class="x-col x-col-fixed cny2mMb" xid="col17" __cid="cny2mMb">
+                              <span xid="span7" style="text-decoration:line-through ;" __cid="cny2mMb" class="cny2mMb">￥</span>  
+                              <span xid="span8" style="text-decoration:line-through ;" __cid="cny2mMb" class="cny2mMb" data-bind="text:val(&#34;fOldPrice&#34;)"></span>
+                            </div>  
+                            <div class="x-col x-col-fixed cny2mMb" xid="col18" __cid="cny2mMb">
+                              <a component="$model/UI2/system/components/justep/button/button" class="btn x-gray btn-sm btn-only-icon pull-left cny2mMb" xid="subBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:subBtnClick" data-config="{&#34;icon&#34;:&#34;icon-android-remove&#34;,&#34;label&#34;:&#34;button&#34;}" __cid="cny2mMb"> 
+                                <i xid="i1" class="icon-android-remove cny2mMb" __cid="cny2mMb"></i>  
+                                <span xid="spanb1" __cid="cny2mMb" class="cny2mMb"></span>
+                              </a>  
+                              <span xid="span9" class="pull-left cny2mMb" __cid="cny2mMb" data-bind="text:val(&#34;fNumber&#34;)"></span>
+                              <a component="$model/UI2/system/components/justep/button/button" class="btn x-gray btn-sm btn-only-icon pull-left cny2mMb" xid="addBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addBtnClick" data-config="{&#34;icon&#34;:&#34;icon-android-add&#34;,&#34;label&#34;:&#34;button&#34;}" __cid="cny2mMb"> 
+                                <i xid="i2" class="icon-android-add cny2mMb" __cid="cny2mMb"></i>  
+                                <span xid="spanb2" __cid="cny2mMb" class="cny2mMb"></span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul> 
+                </div>
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cny2mMb" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cny2mMb"> 
+                  <div class="x-col x-col-fixed cny2mMb" xid="col4" __cid="cny2mMb">
+                    <span xid="span10" __cid="cny2mMb" class="cny2mMb">总计（不含运费）</span>
+                  </div>  
+                  <div class="x-col x-col-fixed cny2mMb" xid="col5" __cid="cny2mMb"> 
+                    <span xid="span11" __cid="cny2mMb" class="cny2mMb">￥</span>  
+                    <span xid="span12" __cid="cny2mMb" class="cny2mMb" data-bind="text:val(&#34;fSumMoney&#34;)"></span>
+                  </div>  
+                  <div class="x-col x-col-fixed cny2mMb" xid="col6" __cid="cny2mMb">
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn x-red cny2mMb" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&#34;label&#34;:&#34;去结算&#34;}" __cid="cny2mMb"> 
+                      <i xid="i3" __cid="cny2mMb" class="cny2mMb"></i>  
+                      <span xid="spanb3" __cid="cny2mMb" class="cny2mMb" data-bind="text:'去结算(' + val(&#34;fSumNumber&#34;) + ')'">去结算</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul> 
+          </div>
+        </div>  
+        <div class="x-content-center x-pull-up cny2mMb" xid="div3" __cid="cny2mMb"> 
+          <span class="x-pull-up-label cny2mMb" xid="spanscro2" __cid="cny2mMb">加载更多...</span>
+        </div> 
+      </div>
+    </div>  
+    <style __cid="cny2mMb" class="cny2mMb">.x-panel.pcMFn6vq-iosstatusbar >.x-panel-top {height: 48px;}.x-panel.pcMFn6vq-iosstatusbar >.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcMFn6vq-iosstatusbar >.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcMFn6vq-iosstatusbar >.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcMFn6vq-iosstatusbar >.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcMFn6vq-iosstatusbar >.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcMFn6vq-iosstatusbar >.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcMFn6vq-iosstatusbar >.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcMFn6vq-iosstatusbar >.x-panel-content {top: 48px;}</style>
+  </div>  
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="messageDialog" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" __cid="cny2mMb" class="cny2mMb">
+    <div class="x-dialog-overlay cny2mMb" __cid="cny2mMb"></div>
+    <div class="x-dialog cny2mMb" style="display:none;" __cid="cny2mMb">
+      <div class="x-dialog-title cny2mMb" __cid="cny2mMb">
+        <button class="close cny2mMb" __cid="cny2mMb">
+          <span __cid="cny2mMb" class="cny2mMb">×</span>
+        </button>
+        <div class="x-dialog-title-text cny2mMb" __cid="cny2mMb"></div>
+      </div>
+      <div class="x-dialog-body cny2mMb" __cid="cny2mMb"></div>
+    </div>
+  </span>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/表单标签.css" />
+		<script>
+			$(document).keydown(function(event){
+				if(event.keyCode=="13"){
+					$("body").css("background","black");
+					$("body").css("color","white");
+				}
+			});
+			$(document).keydown(function(event){
+				if(event.keyCode=="32"){
+					$("body").css("background","white");
+					$("body").css("color","black");
+				}
+			});
+		</script>
+		<title>键盘事件</title>
+	</head>
+	<body>
+		<header>
+			<h2>键盘事件</h2>
+		</header>
+		<article>
+			<p style="padding: 30px;text-align: center;">
+			按下ENTER键切换成夜间模式
+			按下空格键切换成白天模式
+			</p>
+		</article>
+		<footer>&copy;我们不是猫耳FM也不是P站</footer>
+	</body>
+</html>

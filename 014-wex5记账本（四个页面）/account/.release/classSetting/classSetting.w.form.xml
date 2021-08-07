@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cy6RZ7b" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cy6RZ7b" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">null</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cy6RZ7b" class="cy6RZ7b"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcr6JRJj-iosstatusbar cy6RZ7b" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cy6RZ7b"> 
+    <div class="x-panel-top cy6RZ7b" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cy6RZ7b"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cy6RZ7b" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;设置分类&quot;}" __cid="cy6RZ7b"> 
+        <div class="x-titlebar-left cy6RZ7b" __cid="cy6RZ7b"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cy6RZ7b" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cy6RZ7b"> 
+            <i class="icon-chevron-left cy6RZ7b" __cid="cy6RZ7b"/>  
+            <span __cid="cy6RZ7b" class="cy6RZ7b"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cy6RZ7b" __cid="cy6RZ7b">设置分类</div>  
+        <div class="x-titlebar-right  cy6RZ7b" __cid="cy6RZ7b">
+          <div class="empty cy6RZ7b" __cid="cy6RZ7b"/>
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon cy6RZ7b" xid="newBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:newBtnClick" data-config="{&quot;icon&quot;:&quot;icon-android-add&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cy6RZ7b"> 
+            <i xid="i1" class="icon-android-add cy6RZ7b" __cid="cy6RZ7b"/>  
+            <span xid="span1" __cid="cy6RZ7b" class="cy6RZ7b"/>
+          </a>
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon cy6RZ7b" xid="saveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;classData.save&quot;}" data-config="{&quot;icon&quot;:&quot;icon-android-checkmark&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cy6RZ7b"> 
+            <i xid="i2" class="icon-android-checkmark cy6RZ7b" __cid="cy6RZ7b"/>  
+            <span xid="span2" __cid="cy6RZ7b" class="cy6RZ7b"/>
+          </a>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content cy6RZ7b" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cy6RZ7b">
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cy6RZ7b" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;classData&quot;}" __cid="cy6RZ7b"> 
+        <ul class="x-list-template hide cy6RZ7b" xid="listTemplateUl1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" __cid="cy6RZ7b"> 
+          <li xid="li1" __cid="cy6RZ7b" class="cy6RZ7b">
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cy6RZ7b" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cy6RZ7b"> 
+              <div class="x-col cy6RZ7b" xid="col1" __cid="cy6RZ7b">
+                <select component="$model/UI2/system/components/justep/select/select" bind-optionsCaption="'请选择...'" class="form-control cy6RZ7b" xid="select1" bind-options="$model.typeData.datas" bind-optionsValue="'type'" bind-optionsAfterRender2="$model.__justep__.selectOptionsAfterRender.bind($model,$element)" bind-optionsBeforeRender="$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-bind="component:{ref:ref(&quot;fType&quot;),name:'$model/UI2/system/components/justep/select/select'}" __cid="cy6RZ7b"/>
+              </div>  
+              <div class="x-col cy6RZ7b" xid="col2" __cid="cy6RZ7b">
+                <input component="$model/UI2/system/components/justep/input/input" class="form-control cy6RZ7b" xid="input1" data-bind="component:{ref:ref(&quot;fClass&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cy6RZ7b"/>
+              </div>  
+              <div class="x-col x-col-center cy6RZ7b" xid="col3" __cid="cy6RZ7b">
+                <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon cy6RZ7b" xid="deleteBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:deleteBtnClick" data-config="{&quot;icon&quot;:&quot;icon-android-close&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cy6RZ7b"> 
+                  <i xid="i3" class="icon-android-close cy6RZ7b" __cid="cy6RZ7b"/>  
+                  <span xid="span3" __cid="cy6RZ7b" class="cy6RZ7b"/>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul> 
+      </div>
+    </div>  
+    <style __cid="cy6RZ7b" class="cy6RZ7b">.x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcr6JRJj-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

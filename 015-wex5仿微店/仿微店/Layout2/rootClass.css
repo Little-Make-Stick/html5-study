@@ -1,0 +1,13 @@
+.x-list ul li {
+	padding: 5px;
+}
+
+.x-list ul li .media {
+	padding: 5px;
+	background-color: white;
+}
+
+.x-list ul li .media-body span {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

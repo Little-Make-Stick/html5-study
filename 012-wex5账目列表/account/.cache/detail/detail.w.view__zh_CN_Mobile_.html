@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<div component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cZzYVve" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cZzYVve" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/controlGroup/controlGroup,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/labelEdit/labelEdit,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <style>null</style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onParamsReceive:modelParamsReceive" __cid="cZzYVve" class="cZzYVve"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcqqeyy2-iosstatusbar cZzYVve" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cZzYVve"> 
+    <div class="x-panel-top cZzYVve" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cZzYVve"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cZzYVve" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&#34;title&#34;:&#34;记一笔&#34;}" __cid="cZzYVve"> 
+        <div class="x-titlebar-left cZzYVve" __cid="cZzYVve"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cZzYVve" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&#34;icon&#34;:&#34;icon-chevron-left&#34;,&#34;label&#34;:&#34;&#34;}" __cid="cZzYVve"> 
+            <i class="icon-chevron-left cZzYVve" __cid="cZzYVve"></i>  
+            <span __cid="cZzYVve" class="cZzYVve"></span> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cZzYVve" __cid="cZzYVve">记一笔</div>  
+        <div class="x-titlebar-right  cZzYVve" __cid="cZzYVve">
+          <div class="empty cZzYVve" __cid="cZzYVve"></div>
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon cZzYVve" xid="okBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:okBtnClick" data-config="{&#34;icon&#34;:&#34;icon-android-checkmark&#34;,&#34;label&#34;:&#34;button&#34;}" __cid="cZzYVve"> 
+            <i xid="i1" class="icon-android-checkmark cZzYVve" __cid="cZzYVve"></i>  
+            <span xid="span1" __cid="cZzYVve" class="cZzYVve"></span>
+          </a>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content cZzYVve" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cZzYVve">
+      <div component="$model/UI2/system/components/justep/controlGroup/controlGroup" class="x-control-group cZzYVve" xid="controlGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/controlGroup/controlGroup'}" data-config="{&#34;title&#34;:&#34;title&#34;}" __cid="cZzYVve"> 
+        <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cZzYVve" xid="labelEdit1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cZzYVve"> 
+          <label class="x-label cZzYVve" xid="label1" __cid="cZzYVve" data-bind="text:$model.accountData.label(&#34;fType&#34;)"></label>  
+          <select component="$model/UI2/system/components/justep/select/select" class="form-control x-edit cZzYVve" xid="select1" data-bind="component:{ref:$model.accountData.ref(&#34;fType&#34;),name:'$model/UI2/system/components/justep/select/select'},options:typeData.datas,optionsValue:'type',optionsAfterRender2:$model.__justep__.selectOptionsAfterRender.bind($model,$element),optionsBeforeRender:$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" __cid="cZzYVve"></select>
+        </div>  
+        <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cZzYVve" xid="labelEdit2" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cZzYVve"> 
+          <label class="x-label cZzYVve" xid="label2" __cid="cZzYVve" data-bind="text:$model.accountData.label(&#34;fClass&#34;)"></label>  
+          <select component="$model/UI2/system/components/justep/select/select" class="form-control x-edit cZzYVve" xid="select2" data-bind="component:{ref:$model.accountData.ref(&#34;fClass&#34;),name:'$model/UI2/system/components/justep/select/select'},options:classData.datas,optionsValue:'fClass',optionsAfterRender2:$model.__justep__.selectOptionsAfterRender.bind($model,$element),optionsBeforeRender:$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" __cid="cZzYVve"></select>
+        </div>  
+        <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cZzYVve" xid="labelEdit3" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cZzYVve"> 
+          <label class="x-label cZzYVve" xid="label3" __cid="cZzYVve" data-bind="text:$model.accountData.label(&#34;fDate&#34;)"></label>  
+          <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit cZzYVve" xid="input1" data-bind="component:{ref:$model.accountData.ref(&#34;fDate&#34;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cZzYVve">
+        </div>  
+        <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cZzYVve" xid="labelEdit4" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cZzYVve"> 
+          <label class="x-label cZzYVve" xid="label4" __cid="cZzYVve" data-bind="text:$model.accountData.label(&#34;fMoney&#34;)"></label>  
+          <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit cZzYVve" xid="input2" data-bind="component:{ref:$model.accountData.ref(&#34;fMoney&#34;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cZzYVve">
+        </div>  
+        <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cZzYVve" xid="labelEdit5" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cZzYVve"> 
+          <label class="x-label cZzYVve" xid="label5" __cid="cZzYVve" data-bind="text:$model.accountData.label(&#34;fDescription&#34;)"></label>  
+          <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit cZzYVve" xid="input3" data-bind="component:{ref:$model.accountData.ref(&#34;fDescription&#34;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cZzYVve">
+        </div>
+      </div>
+    </div>  
+    <style __cid="cZzYVve" class="cZzYVve">.x-panel.pcqqeyy2-iosstatusbar >.x-panel-top {height: 48px;}.x-panel.pcqqeyy2-iosstatusbar >.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcqqeyy2-iosstatusbar >.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcqqeyy2-iosstatusbar >.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcqqeyy2-iosstatusbar >.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcqqeyy2-iosstatusbar >.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcqqeyy2-iosstatusbar >.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcqqeyy2-iosstatusbar >.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcqqeyy2-iosstatusbar >.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

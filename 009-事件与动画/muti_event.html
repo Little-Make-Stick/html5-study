@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/表单标签.css" />
+		<script>
+			$(document).ready(function(){
+				$("#demo").hover(function(){
+					$("p").addClass("demo_style");
+				},function(){
+					$("p").removeClass("demo_style");
+				});
+			});
+		</script>
+		<style>
+			.demo_style{
+				background:black;
+				color:white;
+			}
+		</style>
+		<title>复合事件</title>
+	</head>
+	<body background="img/品月.jpg">
+		<header>
+			<h2>复合事件</h2>
+		</header>
+		<article>
+			<a href="#" id="demo" style="text-decoration: none;">
+				<p style="padding: 30px;">客官，鼠标过来一下，然后移开</p>
+			</a>
+		</article>
+		<footer>&copy;我们不是猫耳FM也不是P站</footer>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cQza6fm" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cQza6fm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cQza6fm" class="cQza6fm"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-card x-full pcuueMJj-iosstatusbar cQza6fm" xid="panel1" style="left:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cQza6fm"> 
+    <div class="x-panel-content cQza6fm" xid="content1" style="left:0px;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cQza6fm"> 
+      <div xid="topdiv" style="background-color:#D93606;padding:10px 10px 10px 10px;" __cid="cQza6fm" class="cQza6fm"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+          <div class="x-col cQza6fm" xid="col1" style="text-align:left;" __cid="cQza6fm"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn x-red btn-lg btn-only-icon cQza6fm" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;linear linear-cog&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cQza6fm"> 
+              <i xid="i5" class="linear linear-cog cQza6fm" __cid="cQza6fm"/>  
+              <span xid="span6" __cid="cQza6fm" class="cQza6fm"/> 
+            </a> 
+          </div>  
+          <div class="x-col cQza6fm" xid="col2" __cid="cQza6fm"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+              <div class="x-col cQza6fm" xid="col6" style="text-align:center;" __cid="cQza6fm"> 
+                <img src="@justepContextPath@/v_5e41e0f941124e5985a4ed38bddeb9c0l_zh_CNs_d_m/test/Layout2/img/user-unlogin.png" alt="" xid="image3" align="middle" __cid="cQza6fm" class="cQza6fm"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+              <div class="x-col cQza6fm" xid="col7" style="text-align:center;" __cid="cQza6fm"> 
+                <span xid="span11" style="font-size:medium;font-weight:bold;color:#FFFFFF;text-align:center;" __cid="cQza6fm" class="cQza6fm">未登录</span> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row4" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+              <div class="x-col cQza6fm" xid="col10" style="text-align:center;" __cid="cQza6fm"> 
+                <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cQza6fm" xid="button9" style="padding:10px 10px 10px 10px;border-style:solid solid solid solid;border-width:1px 1px 1px 1px;color:#FFFFFF;font-size:larger;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;登录&quot;}" __cid="cQza6fm"> 
+                  <i xid="i9" __cid="cQza6fm" class="cQza6fm"/>  
+                  <span xid="span12" __cid="cQza6fm" class="cQza6fm">登录</span> 
+                </a> 
+              </div>  
+              <div class="x-col cQza6fm" xid="col11" style="text-align:center;" __cid="cQza6fm"> 
+                <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cQza6fm" xid="button10" style="color:#FFFFFF;padding:10px 10px 10px 10px;border-style:solid solid solid solid;border-width:1px 1px 1px 1px;font-size:large;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;注册&quot;}" __cid="cQza6fm"> 
+                  <i xid="i10" __cid="cQza6fm" class="cQza6fm"/>  
+                  <span xid="span13" __cid="cQza6fm" class="cQza6fm">注册</span> 
+                </a> 
+              </div> 
+            </div> 
+          </div>  
+          <div class="x-col cQza6fm" xid="col3" style="text-align:right;" __cid="cQza6fm"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn x-red btn-lg btn-only-icon cQza6fm" xid="button6" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;linear linear-bubble&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cQza6fm"> 
+              <i xid="i6" class="linear linear-bubble cQza6fm" __cid="cQza6fm"/>  
+              <span xid="span7" __cid="cQza6fm" class="cQza6fm"/> 
+            </a> 
+          </div> 
+        </div> 
+      </div>  
+      <div xid="collectGoods" __cid="cQza6fm" class="cQza6fm"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row6" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+          <div class="x-col x-col-fixed cQza6fm" xid="col9" style="text-align:left;" __cid="cQza6fm"> 
+            <h3 xid="h32" style="color:#000000;text-align:left;" __cid="cQza6fm" class="cQza6fm">收藏的商品</h3> 
+          </div>  
+          <div class="x-col x-col-fixed cQza6fm" xid="col12" style="text-align:right;" __cid="cQza6fm"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-only-icon cQza6fm" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;linear linear-chevronright&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cQza6fm"> 
+              <i xid="i3" class="linear linear-chevronright cQza6fm" __cid="cQza6fm"/>  
+              <span xid="span4" __cid="cQza6fm" class="cQza6fm"/> 
+            </a> 
+          </div> 
+        </div>  
+        <div xid="div7" style="text-align:center;font-size:x-large;padding:10px 10px 10px 10px;" __cid="cQza6fm" class="cQza6fm"> 
+          <span xid="span8" style="color:#C0C0C0;text-align:center;" __cid="cQza6fm" class="cQza6fm">您还没有收藏过商品</span> 
+        </div> 
+      </div>  
+      <div xid="collectShops" __cid="cQza6fm" class="cQza6fm"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row7" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+          <div class="x-col x-col-fixed cQza6fm" xid="col14" style="text-align:left;" __cid="cQza6fm"> 
+            <h3 xid="h33" style="color:#000000;text-align:left;" __cid="cQza6fm" class="cQza6fm">收藏的店铺</h3> 
+          </div>  
+          <div class="x-col x-col-fixed cQza6fm" xid="col15" style="text-align:right;" __cid="cQza6fm"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-only-icon cQza6fm" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;linear linear-chevronright&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cQza6fm"> 
+              <i xid="i4" class="linear linear-chevronright cQza6fm" __cid="cQza6fm"/>  
+              <span xid="span5" __cid="cQza6fm" class="cQza6fm"/> 
+            </a> 
+          </div> 
+        </div>  
+        <div xid="div8" style="font-size:x-large;text-align:center;padding:10px 10px 10px 10px;color:#C0C0C0;" __cid="cQza6fm" class="cQza6fm"> 
+          <span xid="span9" style="text-align:center;" __cid="cQza6fm" class="cQza6fm">您还没有收藏过商店</span> 
+        </div> 
+      </div>  
+      <div xid="cart" __cid="cQza6fm" class="cQza6fm"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cQza6fm" xid="row5" style="color:#000000;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cQza6fm"> 
+          <div class="x-col x-col-fixed cQza6fm" xid="col4" style="text-align:left;color:#000000;" __cid="cQza6fm"> 
+            <h3 xid="h31" style="color:#000000;" __cid="cQza6fm" class="cQza6fm">购物车</h3> 
+          </div>  
+          <div class="x-col x-col-fixed cQza6fm" xid="col5" style="text-align:right;" __cid="cQza6fm"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-only-icon cQza6fm" xid="cartBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:cartBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-chevronright&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cQza6fm"> 
+              <i xid="i2" class="linear linear-chevronright cQza6fm" __cid="cQza6fm"/>  
+              <span xid="span3" __cid="cQza6fm" class="cQza6fm"/> 
+            </a> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <style __cid="cQza6fm" class="cQza6fm">.x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-top {height: 0px;}.x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcuueMJj-iosstatusbar &gt;.x-panel-content {top: 0px;}</style> 
+  </div> 
+</div>

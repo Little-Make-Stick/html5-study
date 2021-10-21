@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        fieldset {
+            width: 70vw;
+            margin: 20px auto;
+            letter-spacing: 2px;
+            padding: 15px;
+        }
+
+        fieldset * {
+            margin: 10px 0;
+        }
+
+        .tip {
+            background-color: cornflowerblue;
+            color: ghostwhite;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="my-form"></form>
+
+    <fieldset form="my-form">
+        <legend>时间input</legend>
+        1--<input type="date" placeholder="date" form="my-form" max="2000-10-21"><br />
+        2--<input type="datetime" placeholder="datetime" form="my-form"><br />
+        3--<input type="datetime-local" placeholder="datetime-local" form="my-form" step="2"><br />
+        4--<input type="month" placeholder="month" form="my-form" step="2"><br />
+        5--<input type="week" placeholder="week" form="my-form" step="2"><br />
+        6--<input type="time" placeholder="time" form="my-form" step="30"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>年份[1-99999],月份[1,12],周[1,53],日期[1,31],小时[0,23],分钟[0,59]</li>
+                <li>2月的日期不会只能调整，上限依旧是31</li>
+                <li>value属性可以返回选择的日期，格式是字符串</li>
+                <li>time设置step="非60倍数"的可以具体到秒输入</li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset form="my-form">
+        <legend>按钮input</legend>
+        7--<input type="button" value="button" form="my-form"><br />
+        8--<input type="submit" value="submit" form="my-form"><br />
+        9--<input type="reset" value="reset" form="my-form"><br />
+        10--<input type="image" src="../image/o_200723013825miku1.png" alt="submit" placeholder="image"
+            form="my-form"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>image本质是submit按钮</li>
+            </ul>
+        </div>
+    </fieldset>
+
+
+    <fieldset form="my-form">
+        <legend>文本input</legend>
+        11--<input type="text" placeholder="text" form="my-form"><br />
+        12--<input type="password" placeholder="password" form="my-form"><br />
+        13--<input type="tel" placeholder="tel" form="my-form"><br />
+        14--<input type="url" placeholder="url" form="my-form"><br />
+        15--<input type="email" placeholder="email" form="my-form"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>password的输入会被掩码</li>
+                <li>更改[type='password']的type为[type="text"]可以明码显示</li>
+                <li>url的格式为 http://.* 或者 https://.* </li>
+                <li>邮箱的正则表达式：/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                    [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/</li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset form="my-form">
+        <legend>选择按钮input</legend>
+        16--<input type="checkbox" placeholder="checkbox" form="my-form" value="young" name="tag"
+            checked>&nbsp;young<br />
+        <input type="checkbox" placeholder="checkbox" form="my-form" value="student" name="tag">&nbsp;student<br />
+        17--<input type="radio" placeholder="radio" form="my-form" value="man" name="sex" checked>&nbsp;man<br />
+        <input type="radio" placeholder="radio" form="my-form" value="woman" name="sex">&nbsp;woman<br />
+        <div class="tip">Tips:
+            <ul>
+                <li>checked标记选中状态</li>
+                <li>name标记分组，value是选中时的返回值</li>
+            </ul>
+        </div>
+    </fieldset>
+
+
+    <fieldset form="my-form">
+        <legend>文件input</legend>
+        18--<input type="file" placeholder="file" form="my-form" accept="image/*" capture="user"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>capture有user（前置摄像头）和（environment）两个值</li>
+                <li>multiple可以设置多选</li>
+                <li>files存储选择的文件</li>
+                <li>value存储选择的文件的路径</li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset form="my-form">
+        <legend>颜色input</legend>
+        19--<input type="color" placeholder="color" form="my-form"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>value存储颜色值</li>
+            </ul>
+        </div>
+    </fieldset>
+
+
+    <fieldset form="my-form">
+        <legend>数值input</legend>
+        20--<input type="number" placeholder="number" form="my-form" max="10" step="2"><br />
+        21--<input type="range" placeholder="range" form="my-form" min="0" step="3">
+            <span id="range-text"></span>
+        <br />
+        <div class="tip">Tips:
+            <ul>
+                <li>[type='range']focus是会有outline出现</li>
+            </ul>
+        </div>
+    </fieldset>
+    <script>
+        function rangeChange(){
+            document.querySelector('#range-text').innerHTML=document.querySelector('[type="range"]').value;
+        }
+        document.body.onload = rangeChange;
+        document.querySelector('[type="range"]').addEventListener('change',rangeChange);
+    </script>
+
+
+    <fieldset form="my-form">
+        <legend>搜索input</legend>
+        22--<input type="search" placeholder="search" form="my-form"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>[type="search"]必须在含有action属性的form里面，虚拟键盘的Done键才会变成Search键</li>
+                <li>cancel按钮可以清除输入的内容</li>
+            </ul>
+        </div>
+    </fieldset>
+
+
+    <fieldset form="my-form">
+        <legend>隐藏input</legend>
+        23--<input type="hidden" placeholder="hidden" form="my-form"><br />
+        <div class="tip">Tips:
+            <ul>
+                <li>一般用于收集或发送信息</li>
+            </ul>
+        </div>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        fieldset {
+            width: 70vw;
+            margin: 20px auto;
+            letter-spacing: 2px;
+            padding: 15px;
+        }
+
+        fieldset * {
+            margin: 10px 0;
+        }
+
+        .tip {
+            background-color: cornflowerblue;
+            color: ghostwhite;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="my-form"></form>
+
+    <fieldset>
+        <legend>textarea</legend>
+        <textarea name="introduce" cols="10" rows="2"></textarea>
+        <div class="tip">Tips:
+            <ul>
+                <li>内容超过textare会出现滚动条</li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>select</legend>
+        <select name="course" >
+            <optgroup label="Web">
+                <option value="HTML">HTML</option>
+                <option value="CSS" selected>CSS</option>
+                <option value="JS">JS</option>
+            </optgroup>
+            <optgroup label="Server">
+                <option value="JAVA">JAVA</option>
+                <option value="PHP">PHP</option>
+            </optgroup>
+        </select>
+        <div class="tip">Tips:
+            <ul>
+                <li>optgroup可以对option进行分组，label属性提供为分组名称</li>
+                <li>size大于1时为滚动列表</li>
+            </ul>
+        </div>
+    </fieldset>
+</body>
+</html>

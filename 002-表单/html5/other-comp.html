@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,8 +32,14 @@
             color: ghostwhite;
             padding: 20px;
         }
+
+        select,input[type='text'] {
+            width: 200px;
+            padding: 10px;
+        }
     </style>
 </head>
+
 <body>
     <form action="#" id="my-form"></form>
 
@@ -48,7 +55,8 @@
 
     <fieldset>
         <legend>select</legend>
-        <select name="course" >
+        <select name="course">
+            <!-- <option value="--please select course--" >--please select course--</option> -->
             <optgroup label="Web">
                 <option value="HTML">HTML</option>
                 <option value="CSS" selected>CSS</option>
@@ -63,8 +71,33 @@
             <ul>
                 <li>optgroup可以对option进行分组，label属性提供为分组名称</li>
                 <li>size大于1时为滚动列表</li>
+                <li>option样式不好改</li>
+                <li>可以对option设置selected属性进行默认选择</li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <!-- datalist list -->
+        <legend>datalist</legend>
+        <input type="text" placeholder="--please select course--" list="course">
+        <datalist id="course">
+            <option value="HTML">HTML</option>
+            <option value="CSS" selected>CSS</option>
+            <option value="JS">JS</option>
+            <option value="JAVA">JAVA</option>
+            <option value="PHP">PHP</option>
+        </datalist>
+        <div class="tip">Tips:
+            <ul>
+                <li>optgroup在datalist中不显示</li>
+                <li>可以对input设置placeholder属性来设置输入框含义</li>
+                <li>可以进行输入筛选</li>
+                <li>option样式依旧不好改</li>
+                <li>默认选择只能通过设置input的value</li>
             </ul>
         </div>
     </fieldset>
 </body>
+
 </html>

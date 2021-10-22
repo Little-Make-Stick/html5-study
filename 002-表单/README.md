@@ -74,36 +74,106 @@ input: 用于搜集用户信息。
 
 ##### Attributes
 
-| attr           | value                                                              | function                                                  | type                                                                                            |
-| -------------- | ------------------------------------------------------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| accept         | MIME_type                                                          | 通过文件上传来提交的文件的类型                            | file                                                                                            |
-| alt            | text                                                               | 图像输入的替代文本                                        | image                                                                                           |
-| autoComplete   | [on ,off]                                                          | 是否使用输入字段的自动完成功能                            | [text, search, url, telephone, email, password, datepickers, range, color]                      |
-| autofocus      | autofocus                                                          | 在页面加载时是否获得焦点。                                | 除 hidden                                                                                       |
-| checked        | checked                                                            | 首次加载时应当被选中                                      | [checkbox,radio]                                                                                |
-| disabled       | disabled                                                           | 加载时禁用此元素                                          | 除 hidden                                                                                       |
-| form           | form_id                                                            | 输入字段所属的一个或多个表单                              | \*                                                                                              |
-| formaction     | url                                                                | 覆盖表单的 action 属性                                    | [image,submit]                                                                                  |
-| formanctype    | [application/x-www-form-urlencoded,multipart/form-data,text/plain] | 规定当表单数据提交到服务器时如何编码                      | [image,submit]                                                                                  |
-| formmethod     | [post ,get]                                                        | 发送表单数据到 action URL 的 HTTP 方法                    | [image,submit]                                                                                  |
-| formnovalidate | formnovalidate                                                     | formnovalidate 属性覆盖 <form> 元素的 novalidate 属性。   | submit                                                                                          |
-| formtarget     | [_blank,_self,_parent,_top,framename]                              | 表单后在哪里显示接收到响应的名称或关键词                  | [image,submit]                                                                                  |
-| list           | datalist_id                                                        | 引用 <datalist> 元素，其中包含 <input> 元素的预定义选项。 | \*                                                                                              |
-| max            | [number,date]                                                      | 输入字段的最大值                                          | [number, range, date, datetime, datetime-local, month, time, week]                              |
-| maxlength      | number                                                             | 规定 <input> 元素中允许的最大字符数                       | \*                                                                                              |
-| min            | [number,date]                                                      | 输入字段的最小值                                          | [number, range, date, datetime, datetime-local, month, time, week]                              |
-| multiple       | multiple                                                           | 允许用户输入到 <input> 元素的多个值                       | [email,file]                                                                                    |
-| name           | text                                                               | <input> 元素的名称                                        | \*                                                                                              |
-| pattern        | regexp                                                             | 验证 <input> 元素的值的正则表达式                         | [text,search,url,tel,email,password]                                                            |
-| placeholder    | text                                                               | 可描述输入 <input> 字段预期值的简短的提示信息             | [text,search,url,tel,email,password]                                                            |
-| readonly       | readonly                                                           | 输入字段是只读的                                          | \*                                                                                              |
-| required       | required                                                           | 必需在提交表单之前填写输入字段                            | [text, search, url, telephone, email, password, date pickers, number, checkbox, radio, file]    |
-| size           | number                                                             | 以字符数计的 <input> 元素的可见宽度                       | \*                                                                                              |
-| src            | url                                                                | 提交按钮的图像的 URL                                      | image                                                                                           |
-| step           | number                                                             | <input> 元素的合法数字间隔                                | [number, range, date, datetime, datetime-local, month, time, week]                              |
-| value          | text                                                               | <input> 元素 value 的值                                   | [[button,reset,submit](按钮文本),[text,password,hidden](初始值),[checkbox,radio,image](关联值)] |
-| width          | pixels                                                             | <input> 元素的宽度                                        | image                                                                                           |
-| height         | pixels                                                             | <input> 元素的高度                                        | image                                                                                           |
+| attr           | value                                                              | function                                                  | type                                                                                               |
+| -------------- | ------------------------------------------------------------------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| accept         | MIME_type                                                          | 通过文件上传来提交的文件的类型                            | file                                                                                               |
+| alt            | text                                                               | 图像输入的替代文本                                        | image                                                                                              |
+| autoComplete   | [on ,off]                                                          | 是否使用输入字段的自动完成功能                            | [text, search, url, telephone, email, password, datepickers, range, color]                         |
+| autofocus      | autofocus                                                          | 在页面加载时是否获得焦点。                                | 除 hidden                                                                                          |
+| checked        | checked                                                            | 首次加载时应当被选中                                      | [checkbox,radio]                                                                                   |
+| disabled       | disabled                                                           | 加载时禁用此元素                                          | 除 hidden                                                                                          |
+| form           | form_id                                                            | 输入字段所属的一个或多个表单                              | \*                                                                                                 |
+| formaction     | url                                                                | 覆盖表单的 action 属性                                    | [image,submit]                                                                                     |
+| formanctype    | [application/x-www-form-urlencoded,multipart/form-data,text/plain] | 规定当表单数据提交到服务器时如何编码                      | [image,submit]                                                                                     |
+| formmethod     | [post ,get]                                                        | 发送表单数据到 action URL 的 HTTP 方法                    | [image,submit]                                                                                     |
+| formnovalidate | formnovalidate                                                     | formnovalidate 属性覆盖 <form> 元素的 novalidate 属性。   | submit                                                                                             |
+| formtarget     | [_blank,_self,_parent,_top,framename]                              | 表单后在哪里显示接收到响应的名称或关键词                  | [image,submit]                                                                                     |
+| list           | datalist_id                                                        | 引用 <datalist> 元素，其中包含 <input> 元素的预定义选项。 | \*                                                                                                 |
+| max            | [number,date]                                                      | 输入字段的最大值                                          | [number, range, date, datetime, datetime-local, month, time, week]                                 |
+| maxlength      | number                                                             | 规定 <input> 元素中允许的最大字符数                       | \*                                                                                                 |
+| min            | [number,date]                                                      | 输入字段的最小值                                          | [number, range, date, datetime, datetime-local, month, time, week]                                 |
+| multiple       | multiple                                                           | 允许用户输入到 <input> 元素的多个值                       | [email,file]                                                                                       |
+| name           | text                                                               | <input> 元素的名称                                        | \*                                                                                                 |
+| pattern        | regexp                                                             | 验证 <input> 元素的值的正则表达式                         | [text,search,url,tel,email,password]                                                               |
+| placeholder    | text                                                               | 可描述输入 <input> 字段预期值的简短的提示信息             | [text,search,url,tel,email,password]                                                               |
+| readonly       | readonly                                                           | 输入字段是只读的                                          | \*                                                                                                 |
+| required       | required                                                           | 必需在提交表单之前填写输入字段                            | [text, search, url, telephone, email, password, date pickers, number, checkbox, radio, file]       |
+| size           | number                                                             | 以字符数计的 <input> 元素的可见宽度                       | \*                                                                                                 |
+| src            | url                                                                | 提交按钮的图像的 URL                                      | image                                                                                              |
+| step           | number                                                             | <input> 元素的合法数字间隔                                | [number, range, date, datetime, datetime-local, month, time, week]                                 |
+| value          | text                                                               | <input> 元素 value 的值                                   | [[button,reset,submit]/(按钮文本),[text,password,hidden]/(初始值),[checkbox,radio,image]/(关联值)] |
+| width          | pixels                                                             | <input> 元素的宽度                                        | image                                                                                              |
+| height         | pixels                                                             | <input> 元素的高度                                        | image                                                                                              |
+
+#### textarea
+
+textarea: 定义一个多行的文本输入控件。
+
+- 特有属性：[rows | cols | wrap];wrap 有两个值：hard & soft
+
+```html
+<textarea name="introduce" cols="10" rows="2"></textarea>
+```
+
+#### option
+
+- 特有属性： [ selected ]
+
+#### select
+
+select: 创建下拉列表。
+
+- 特有属性：[multipe | size ]
+
+```css
+select,
+input[type="text"] {
+  width: 200px;
+  padding: 10px;
+}
+```
+
+```html
+<select name="course">
+  <!-- <option value="--please select course--" >--please select course--</option> -->
+  <optgroup label="Web">
+    <option value="HTML">HTML</option>
+    <option value="CSS" selected>CSS</option>
+    <option value="JS">JS</option>
+  </optgroup>
+  <optgroup label="Server">
+    <option value="JAVA">JAVA</option>
+    <option value="PHP">PHP</option>
+  </optgroup>
+</select>
+```
+
+- select 相关的 js：
+  - new Option(text,value)
+    ```js
+    document.querySelector("select").options.add(new Option("txt", "val"));
+    ```
+  - options.length
+    ```js
+    document.querySelector("select").options.length;
+    ```
+  - 修改选中值
+    ```js
+    document.querySelector("select").options[3].selected = true;
+    ```
+  - 查询选中的索引
+    ```js
+    document.querySelector("select").selectedIndex;
+    ```
+  - 查询选中值
+    ```js
+    document.querySelector("select").value;
+    document.querySelectorAll("option")[
+      document.querySelector("select").selectedIndex
+    ].value;
+    ```
+- select 相关的 css：
+  select 框的样式可以修改，option 的样式不好改
 
 #### datalist
 
@@ -112,52 +182,37 @@ datalist: 规定了 <input> 元素可能的选项列表。
 - list 属性引用 <datalist> 元素，其中包含 <input> 元素的预定义选项。
 
 ```html
-<input type="text" name="province" list="provinces" />
-<datalist id="provinces">
-  <option value="GuangDong"></option>
-  <option value="HuNan"></option>
-  <option value="HuBei"></option>
+<input type="text" placeholder="--please select course--" list="course" />
+<datalist id="course">
+  <option value="HTML">HTML</option>
+  <option value="CSS" selected>CSS</option>
+  <option value="JS">JS</option>
+  <option value="JAVA">JAVA</option>
+  <option value="PHP">PHP</option>
 </datalist>
 ```
 
-#### textarea
-
-textarea: 定义一个多行的文本输入控件。
-
-* 特有属性：[rows | cols | wrap];wrap有两个值：hard & soft
-
-#### option
-
-* 特有属性： [ selected ]
-
-#### select
-
-select: 创建下拉列表。
-
-* 特有属性：[multipe | size ]
-* select 相关的js：
-  * new Option(text,value)
+- datalist 相关的 js：
+  - new Option(text,value)
     ```js
-    document.querySelector('select').options.add(new Option('txt', 'val'));
+    let newEl = document.createElement("option");
+    newEl.setAttribute("value", "test");
+    newEl.innerHTML = "test";
+    document.querySelector("datalist").appendChild(newEl);
     ```
-  * options.length
+  - options.length
     ```js
-    document.querySelector('select').options.length; 
+    document.querySelector("datalist").options.length;
     ```
-  * 修改选中值
+  - 修改选中值
     ```js
-    document.querySelector('select').options[3].selected = true;
+    document.querySelector("[type='text']").value =
+      document.querySelector("datalist").options[1].value;
     ```
-  * 查询选中的索引
+  - 查询选中值
     ```js
-    document.querySelector('select').selectedIndex;
+    document.querySelector("[type='text']").value;
     ```
-  * 查询选中值
-    ```js
-    document.querySelector('select').value;
-    document.querySelectorAll('option')[document.querySelector('select').selectedIndex].value
-    ```
-
 
 #### 时间
 
@@ -269,17 +324,18 @@ select: 创建下拉列表。
 ```html
 <input type="search" placeholder="search" />
 ```
+
 - 修改[type='search']控件的样式：
-  ::-webkit-input-placeholder：placeholder占位符
+  ::-webkit-input-placeholder：placeholder 占位符
   ::-webkit-search-cancel-button：默认的取消按钮
-  苹果6 ios10的搜索框是椭圆形，可以用下面语句去除：
+  苹果 6 ios10 的搜索框是椭圆形，可以用下面语句去除：
   ```css
-  input[type=search]{
-      -webkit-appearance: none;//去除ios下input 椭圆形
+  input[type="search"] {
+    -webkit-appearance: none; //去除ios下input 椭圆形
   }
   ```
 
-* [type="search"]必须在含有action属性的form里面，虚拟键盘的Done键才会变成Search键
+* [type="search"]必须在含有 action 属性的 form 里面，虚拟键盘的 Done 键才会变成 Search 键
 
 #### 隐藏
 
@@ -287,4 +343,4 @@ select: 创建下拉列表。
 <input type="hidden" placeholder="hidden" />
 ```
 
-* 收集或发送信息
+- 收集或发送信息

@@ -6,7 +6,7 @@
   ```
 - 读取数据语法：
   ```js
-  var lastname = localStorage.getItem("key");
+  localStorage.getItem("key");
   ```
 - 删除数据语法：
 

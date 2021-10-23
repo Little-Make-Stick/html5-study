@@ -8,7 +8,7 @@
             var texts = url.split("?account=");
             var account = texts[1];
             if(account===undefined){
-                Tologin();
+                Tologin();  
             }
 		    var db = openDatabase('EduManage', '1.0', 'Test DB', 2 * 1024 * 1024);
 		    db.transaction(function (tx) {

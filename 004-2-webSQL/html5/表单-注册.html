@@ -7,8 +7,8 @@
 		<title>学生信息管理--注册用户</title>
 		<link rel="stylesheet" type="text/css" href="../css3/表单标签.css">
 		<script type="text/javascript">
-			function setValues() {
-				var account = "1713420115";
+			function setValues() {  
+				var account = "1713420116";
 				var name = document.getElementById("fullname").value;
 				var telephone = document.getElementById("tel").value;
 				var email = document.getElementById("email").value;
@@ -30,7 +30,7 @@
 					function(tx,result){
 						alert("插入数据成功");
 						alert("帐号为" + account + ",点击确定跳转到登录页");
-                        window.location.href = "表单-登录.html";
+                        // window.location.href = "表单-登录.html";
 					},
 					function(tx,error){alert("插入数据失败"+error.message);
 					});
@@ -59,13 +59,13 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="表单-注册.html">注册</a>
+					<a href="表单-注册.html" rel="opener">注册</a>
 				</li>
 				<li>
-					<a href="表单-登录.html">登录</a>
+					<a href="表单-登录.html" rel="opener">登录</a>
 				</li>
 				<li>
-					<a href="我的信息.html">我的信息</a>
+					<a href="我的信息.html" rel="opener">我的信息</a>
 				</li>
 			</ul>
 		</nav><br /><br /><br />

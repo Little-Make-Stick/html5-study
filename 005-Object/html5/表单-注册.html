@@ -1,149 +1,158 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-	<head>
-    
-		<meta charset="UTF-8" />
-		<title>学生信息管理--注册用户</title>
-		<link rel="stylesheet" type="text/css" href="../css3/表单标签.css">
-		<script type="text/javascript">
-			function student(account, name,telephone,email,birthday,province,city){
-				this.account=account;
-				this.name=name;
-				this.telephone=telephone;
-				this.email=email;
-				this.birthday=birthday;
-				this.province=province;
-				this.city=city;
-				this.printStudent=function(){
-					alert("姓名："+this.name+"\n手机号："+this.telephone+"\n电子邮箱："+this.email+"\n生日："+this.birthday+"\n省份："+this.province+"\n城市："+this.city);
-				}
+<head>
+
+	<meta charset="UTF-8" />
+	<title>学生信息管理--注册用户</title>
+	<link rel="stylesheet" type="text/css" href="../css3/表单标签.css">
+	<script type="text/javascript">
+		function student(account, name, telephone, email, birthday, province, city) {
+			this.account = account;
+			this.name = name;
+			this.telephone = telephone;
+			this.email = email;
+			this.birthday = birthday;
+			this.province = province;
+			this.city = city;
+			this.printStudent = function () {
+				alert("姓名：" + this.name + "\n手机号：" + this.telephone + "\n电子邮箱：" + this.email + "\n生日：" + this.birthday + "\n省份：" + this.province + "\n城市：" + this.city);
 			}
-			
-			function setValues() {
-				var account = "1713420115";
-				var name = document.getElementById("fullname").value;
-				var telephone = document.getElementById("tel").value;
-				var email = document.getElementById("email").value;
-				var birthday = document.getElementById("birthday").value;
-				var province = document.getElementById("province").value;
-				var city = document.getElementById("city").value;
-				var passwd = document.getElementById("password").value;
-				var db = openDatabase('EduManage', '1.0', 'Test DB', 2 * 1024 * 1024);
-				db.transaction(function(tx) {
-					tx.executeSql('CREATE TABLE IF NOT EXISTS Students (account unique, name,telephone,email,birthday,province,city,password)',[],
-					function(tx,result){alert("创建表Students成功");},
-					function(tx,error){alert("创建表Students失败"+error.message);
+		}
+
+		function setValues() {
+			var account = "1713420117";
+			var name = document.getElementById("fullname").value;
+			var telephone = document.getElementById("tel").value;
+			var email = document.getElementById("email").value;
+			var birthday = document.getElementById("birthday").value;
+			var province = document.getElementById("province").value;
+			var city = document.getElementById("city").value;
+			var passwd = document.getElementById("password").value;
+			var db = openDatabase('EduManage', '1.0', 'Test DB', 2 * 1024 * 1024);
+			db.transaction(function (tx) {
+				tx.executeSql('CREATE TABLE IF NOT EXISTS Students (account unique, name,telephone,email,birthday,province,city,password)', [],
+					function (tx, result) { alert("创建表Students成功"); },
+					function (tx, error) {
+						alert("创建表Students失败" + error.message);
 					});
-					tx.executeSql('CREATE TABLE IF NOT EXISTS StudentLogins (account unique, loginkey)',[],
-					function(tx,result){alert("创建表StudentLogins成功");},
-					function(tx,error){alert("创建表StudentLogins失败"+error.message);
+				tx.executeSql('CREATE TABLE IF NOT EXISTS StudentLogins (account unique, loginkey)', [],
+					function (tx, result) { alert("创建表StudentLogins成功"); },
+					function (tx, error) {
+						alert("创建表StudentLogins失败" + error.message);
 					});
-					tx.executeSql('INSERT INTO Students (account,name,telephone,email,birthday,province,city,password) VALUES (?,?,?,?,?,?,?,?)', [account, name, telephone, email, birthday, province, city, passwd],
-					function(tx,result){
+				tx.executeSql('INSERT INTO Students (account,name,telephone,email,birthday,province,city,password) VALUES (?,?,?,?,?,?,?,?)', [account, name, telephone, email, birthday, province, city, passwd],
+					function (tx, result) {
 						alert("插入数据成功");
-						var stud=new student(account, name,telephone,email,birthday,province,city);
+						// var stud=new student(account, name,telephone,email,birthday,province,city);
+						let stud = Object.create(student, { account: account, name: name, telephone: telephone, email: email, birthday: birthday, province: province, city: city })
 						stud.printStudent();
 						alert("帐号为" + account + ",点击确定跳转到登录页");
-                        window.location.href = "表单-登录.html";
+						window.location.href = "表单-登录.html";
 					},
-					function(tx,error){alert("插入数据失败"+error.message);
+					function (tx, error) {
+						alert("插入数据失败" + error.message);
 					});
-				});
-				
+			});
+
+		}
+
+		function check() {
+			var checkpasswd = document.getElementById("password").value;
+			var passwd = document.getElementById("checkpassword").value
+			if (checkpasswd != passwd) {
+				alert("确认密码与密码不一致，请重新输入");
+				document.getElementById("checkpassword").focus();
 			}
+		}
+	</script>
+</head>
 
-			function check() {
-				var checkpasswd = document.getElementById("password").value;
-				var passwd = document.getElementById("checkpassword").value
-				if(checkpasswd != passwd) {
-					alert("确认密码与密码不一致，请重新输入");
-					document.getElementById("checkpassword").focus();
-				}
-			}
-		</script>
-	</head>
+<body>
+	<header>
+		<hgroup>
+			<h1>学生信息管理</h1>
+			<h2>学生用户--注册</h2>
+		</hgroup>
+	</header><br /><br /><br />
+	<nav>
+		<ul>
+			<li>
+				<a href="表单-注册.html">注册</a>
+			</li>
+			<li>
+				<a href="表单-登录.html">登录</a>
+			</li>
+			<li>
+				<a href="我的信息.html">我的信息</a>
+			</li>
+		</ul>
+	</nav><br /><br /><br />
+	<form id="RegisterForm" autocomplete="on" action="javascript:setValues();" method="get">
+		<br /><br /><br />
 
-	<body>
-		<header>
-			<hgroup>
-				<h1>学生信息管理</h1>
-				<h2>学生用户--注册</h2>
-			</hgroup>
-		</header><br /><br /><br />
-		<nav>
-			<ul>
-				<li>
-					<a href="表单-注册.html">注册</a>
-				</li>
-				<li>
-					<a href="表单-登录.html">登录</a>
-				</li>
-				<li>
-					<a href="我的信息.html">我的信息</a>
-				</li>
-			</ul>
-		</nav><br /><br /><br />
-		<form id="RegisterForm" autocomplete="on" action="javascript:setValues();" method="get">
-			<br /><br /><br />
-			
-			<fieldset>
-				<legend> 基本信息 </legend>
+		<fieldset>
+			<legend> 基本信息 </legend>
 
-				<label>姓名:<input id="fullname" name="name" type="text" placeholder="Enter your name" autofocus required size="50">
-                </label>
+			<label>姓名:<input id="fullname" name="name" type="text" placeholder="Enter your name" autofocus required
+					size="50">
+			</label>
 
-				<label>手机号:<input id="tel" name="telephone" type="tel" placeholder="Pattern: 1-234-567-8910" required size="50" pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))">
-                </label>
+			<label>手机号:<input id="tel" name="telephone" type="tel" placeholder="Pattern: 1-234-567-8910" required
+					size="50" pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))">
+			</label>
 
-				<label>邮箱地址:<input id="email" name="email" type="email" placeholder="Enter your email address" required size="50">
-                </label>
+			<label>邮箱地址:<input id="email" name="email" type="email" placeholder="Enter your email address" required
+					size="50">
+			</label>
 
-				<label>出生日期:<input id="birthday" name="birthday" type="date">
-                </label>
+			<label>出生日期:<input id="birthday" name="birthday" type="date">
+			</label>
 
-			</fieldset>
-			
-			<br /><br /><br />
-			<fieldset>
-				<legend> 地址信息 </legend>
-				<label>省份:<input type="text" id="province" name="province" list="provinces">
-                <datalist id="provinces">
-                    <option value="GuangDong">
-                    <option value="HuNan">
-                    <option value="HuBei">
-                    <option value="ShanDong">
-                </datalist>
-                </label>
-				<label>城市:<input type="text" id="city" name="city" list="citys">
-                <datalist id="citys">
-                    <option value="ShanTou">
-                    <option value="ChenZhou">
-                    <option value="GuangZhou">
-                    <option value="LinYi">
-                </datalist>
-                </label>
+		</fieldset>
 
-			</fieldset>
-			
-			<br /><br />
-			
-			<fieldset>
-				<legend>帐号信息</legend>
-				<label>密码:<input name="password" id="password" type="password" placeholder="Enter your password" required size="50" pattern="([0-9]{6})" >
-	            </label>
-				<label>确认密码:<input name="checkpassword" id="checkpassword" type="password" onchange="check()" placeholder="Enter your password again" required size="50" pattern="([0-9]{6})" >
-	            </label>
-			</fieldset>
-			
+		<br /><br /><br />
+		<fieldset>
+			<legend> 地址信息 </legend>
+			<label>省份:<input type="text" id="province" name="province" list="provinces">
+				<datalist id="provinces">
+					<option value="GuangDong">
+					<option value="HuNan">
+					<option value="HuBei">
+					<option value="ShanDong">
+				</datalist>
+			</label>
+			<label>城市:<input type="text" id="city" name="city" list="citys">
+				<datalist id="citys">
+					<option value="ShanTou">
+					<option value="ChenZhou">
+					<option value="GuangZhou">
+					<option value="LinYi">
+				</datalist>
+			</label>
 
-			<input type="submit" value="提交" width="100" height="45" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="reset" value="重置" width="100" height="45" />
-		</form>
-		<footer>
-			<p>&copy; 2011 Acme United. All rights reserved.</p>
-		</footer>
+		</fieldset>
 
-	</body>
+		<br /><br />
+
+		<fieldset>
+			<legend>帐号信息</legend>
+			<label>密码:<input name="password" id="password" type="password" placeholder="Enter your password" required
+					size="50" pattern="([0-9]{6})">
+			</label>
+			<label>确认密码:<input name="checkpassword" id="checkpassword" type="password" onchange="check()"
+					placeholder="Enter your password again" required size="50" pattern="([0-9]{6})">
+			</label>
+		</fieldset>
+
+
+		<input type="submit" value="提交" width="100" height="45" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="重置" width="100" height="45" />
+	</form>
+	<footer>
+		<p>&copy; 2011 Acme United. All rights reserved.</p>
+	</footer>
+
+</body>
 
 </html>

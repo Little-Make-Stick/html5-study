@@ -6,7 +6,7 @@
 		<title>学生信息管理--学生登录</title>
 		<link rel="stylesheet" type="text/css" href="../css3/表单标签.css">
 		<script type="text/javascript">
-			function loginValues() {
+			function loginValues() {  
 				var account=document.getElementById("account").value;
 				var db = openDatabase('EduManage', '1.0', 'Test DB', 2 * 1024 * 1024);
 				db.transaction(function (tx) {

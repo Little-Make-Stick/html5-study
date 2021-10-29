@@ -1,5 +1,8 @@
 ### HTML Object
 
+官方文档：
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object
+
 #### 声明对象
 
 * let obj = {k:v,k1:v1}
